@@ -1,0 +1,22 @@
+@	IN	MX	10 mail.yourdomain.com.
+@	IN	TXT	"v=spf1 mx -all" 
+_dmarc	IN	TXT	"v=DMARC1; p=quarantine;" 
+mail._domainkey	IN	TXT	"v=DKIM1; h=sha256; k=rsa; s=email; p=" "" 
+_caldavs._tcp	IN	SRV	0 0 443 mail.yourdomain.com.
+_carddavs._tcp	IN	SRV	0 0 443 mail.yourdomain.com.
+autoconfig	IN	A	192.168.1.127
+autoconfig	IN	TXT	"v=spf1 -all" 
+autoconfig	IN	MX	0 mail.yourdomain.com.
+_dmarc.autoconfig	IN	TXT	"v=DMARC1; p=reject;" 
+autodiscover	IN	A	192.168.1.127
+autodiscover	IN	TXT	"v=spf1 -all" 
+autodiscover	IN	MX	0 mail.yourdomain.com.
+_dmarc.autodiscover	IN	TXT	"v=DMARC1; p=reject;" 
+mta-sts	IN	A	192.168.1.127
+mta-sts	IN	TXT	"v=spf1 -all" 
+mta-sts	IN	MX	0 mail.yourdomain.com.
+_dmarc.mta-sts	IN	TXT	"v=DMARC1; p=reject;" 
+www	IN	A	192.168.1.127
+www	IN	TXT	"v=spf1 -all" 
+www	IN	MX	0 mail.yourdomain.com.
+_dmarc.www	IN	TXT	"v=DMARC1; p=reject;" 
